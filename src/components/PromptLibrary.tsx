@@ -31,7 +31,7 @@ export const PromptLibrary: React.FC<PromptLibraryProps> = ({ isOpen, onClose, o
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
           <h2 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-indigo-600" />
+            <BookOpen className="w-5 h-5 text-rose-600" />
             Prompt Library
           </h2>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600 transition-colors">
@@ -49,7 +49,7 @@ export const PromptLibrary: React.FC<PromptLibraryProps> = ({ isOpen, onClose, o
                 className={`
                   w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all
                   ${activeCategory === category.id 
-                    ? 'bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-100' 
+                    ? 'bg-white text-rose-600 shadow-sm ring-1 ring-rose-100' 
                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                   }
                 `}
@@ -73,12 +73,12 @@ export const PromptLibrary: React.FC<PromptLibraryProps> = ({ isOpen, onClose, o
                   <button
                     key={index}
                     onClick={() => handleSelect(prompt, uniqueId)}
-                    className="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md hover:bg-indigo-50/30 transition-all group relative"
+                    className="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-rose-300 hover:shadow-md hover:bg-rose-50/30 transition-all group relative"
                   >
                     <p className="text-slate-700 text-sm leading-relaxed pr-8">
                       {prompt}
                     </p>
-                    <div className="absolute top-4 right-4 text-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute top-4 right-4 text-rose-500 opacity-0 group-hover:opacity-100 transition-opacity">
                       {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </div>
                   </button>

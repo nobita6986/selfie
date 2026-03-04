@@ -144,7 +144,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen bg-rose-100 font-sans text-slate-900 selection:bg-rose-200 selection:text-rose-900">
       <SettingsModal 
         isOpen={isSettingsOpen} 
         onClose={() => setIsSettingsOpen(false)} 
@@ -162,16 +162,16 @@ function App() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-indigo-200">
+            <div className="w-8 h-8 bg-rose-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-rose-200">
               K
             </div>
-            <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+            <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600">
               KOC Selfie Gương
             </h1>
           </div>
           <button 
             onClick={() => setIsSettingsOpen(true)}
-            className="p-2 text-slate-500 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-all"
+            className="p-2 text-slate-500 hover:text-rose-600 hover:bg-rose-50 rounded-full transition-all"
           >
             <Settings className="w-5 h-5" />
           </button>
@@ -187,7 +187,7 @@ function App() {
             {/* Image Uploads */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-6">
               <h2 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold">1</span>
+                <span className="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold">1</span>
                 Upload Images
               </h2>
               <div className="grid grid-cols-2 gap-4">
@@ -207,7 +207,7 @@ function App() {
             {/* Configuration */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-6">
               <h2 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold">2</span>
+                <span className="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold">2</span>
                 Configuration
               </h2>
 
@@ -220,8 +220,8 @@ function App() {
                     className={`
                       flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all
                       ${config.holdingPhone 
-                        ? 'border-indigo-600 bg-indigo-50 text-indigo-700' 
-                        : 'border-slate-200 hover:border-indigo-200 text-slate-600'
+                        ? 'border-rose-600 bg-rose-50 text-rose-700' 
+                        : 'border-slate-200 hover:border-rose-200 text-slate-600'
                       }
                     `}
                   >
@@ -233,8 +233,8 @@ function App() {
                     className={`
                       flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all
                       ${!config.holdingPhone 
-                        ? 'border-indigo-600 bg-indigo-50 text-indigo-700' 
-                        : 'border-slate-200 hover:border-indigo-200 text-slate-600'
+                        ? 'border-rose-600 bg-rose-50 text-rose-700' 
+                        : 'border-slate-200 hover:border-rose-200 text-slate-600'
                       }
                     `}
                   >
@@ -250,7 +250,7 @@ function App() {
                 <select
                   value={config.scene}
                   onChange={(e) => setConfig(prev => ({ ...prev, scene: e.target.value as Scene }))}
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
                 >
                   {Object.values(Scene).map((scene) => (
                     <option key={scene} value={scene}>{scene}</option>
@@ -264,7 +264,7 @@ function App() {
                   <label className="block text-sm font-medium text-slate-700">Additional Details (Optional)</label>
                   <button
                     onClick={() => setIsLibraryOpen(true)}
-                    className="text-xs flex items-center gap-1 text-indigo-600 hover:text-indigo-700 font-medium px-2 py-1 rounded-md hover:bg-indigo-50 transition-colors"
+                    className="text-xs flex items-center gap-1 text-rose-600 hover:text-rose-700 font-medium px-2 py-1 rounded-md hover:bg-rose-50 transition-colors"
                   >
                     <BookOpen className="w-3 h-3" />
                     Browse Library
@@ -274,7 +274,7 @@ function App() {
                   value={config.additionalPrompt}
                   onChange={(e) => setConfig(prev => ({ ...prev, additionalPrompt: e.target.value }))}
                   placeholder="e.g., sunset lighting, smiling gently, luxury vibe..."
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all resize-none h-24 text-sm"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all resize-none h-24 text-sm"
                 />
               </div>
 
@@ -283,10 +283,10 @@ function App() {
                 onClick={handleGenerate}
                 disabled={status.isGenerating || !config.kocImage || !config.outfitImage}
                 className={`
-                  w-full py-4 rounded-xl font-bold text-white shadow-lg shadow-indigo-200 flex items-center justify-center gap-2 transition-all transform active:scale-[0.98]
+                  w-full py-4 rounded-xl font-bold text-white shadow-lg shadow-rose-200 flex items-center justify-center gap-2 transition-all transform active:scale-[0.98]
                   ${status.isGenerating || !config.kocImage || !config.outfitImage
                     ? 'bg-slate-300 cursor-not-allowed shadow-none'
-                    : 'bg-gradient-to-r from-indigo-600 to-violet-600 hover:shadow-xl hover:shadow-indigo-300'
+                    : 'bg-gradient-to-r from-rose-600 to-pink-600 hover:shadow-xl hover:shadow-rose-300'
                   }
                 `}
               >
@@ -320,7 +320,7 @@ function App() {
                 {status.resultUrl && (
                   <button 
                     onClick={handleDownload}
-                    className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors shadow-sm"
+                    className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-rose-600 transition-colors shadow-sm"
                   >
                     <Download className="w-4 h-4" />
                     Download
@@ -328,9 +328,9 @@ function App() {
                 )}
               </div>
               
-              <div className="flex-1 bg-slate-100 flex items-center justify-center p-8 relative">
+              <div className="flex-1 bg-rose-50/50 flex items-center justify-center p-8 relative">
                 {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#6366f1 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+                <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#e11d48 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
 
                 {status.resultUrl ? (
                   <div className="flex flex-col items-center w-full z-10 gap-6">
@@ -347,7 +347,7 @@ function App() {
                         <select
                           value={selectedEditOption}
                           onChange={(e) => setSelectedEditOption(e.target.value)}
-                          className="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none text-sm"
+                          className="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-500 outline-none text-sm"
                         >
                           <option value="">Select an edit style...</option>
                           {EDIT_OPTIONS.map(opt => (
@@ -361,7 +361,7 @@ function App() {
                             px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2 transition-colors
                             ${isEditing || !selectedEditOption
                               ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                              : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                              : 'bg-rose-600 text-white hover:bg-rose-700'
                             }
                           `}
                         >
@@ -384,11 +384,11 @@ function App() {
                   <div className="text-center text-slate-400 z-10">
                     {status.isGenerating ? (
                       <div className="flex flex-col items-center gap-4">
-                        <div className="w-16 h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin"></div>
+                        <div className="w-16 h-16 border-4 border-rose-200 border-t-rose-600 rounded-full animate-spin"></div>
                         <p className="font-medium text-slate-600">Creating magic...</p>
                         <div className="w-64 h-2 bg-slate-200 rounded-full overflow-hidden">
                           <div 
-                            className="h-full bg-indigo-600 transition-all duration-300 ease-out"
+                            className="h-full bg-rose-600 transition-all duration-300 ease-out"
                             style={{ width: `${status.progress}%` }}
                           ></div>
                         </div>
@@ -396,7 +396,7 @@ function App() {
                     ) : (
                       <div className="flex flex-col items-center gap-4">
                         <div className="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-2">
-                          <Sparkles className="w-10 h-10 text-indigo-200" />
+                          <Sparkles className="w-10 h-10 text-rose-300" />
                         </div>
                         <p className="text-lg font-medium text-slate-500">Ready to create</p>
                         <p className="text-sm max-w-xs mx-auto">Upload your photos and choose settings to generate a stunning mirror selfie.</p>

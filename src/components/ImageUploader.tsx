@@ -65,8 +65,8 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ label, image, onIm
             relative flex flex-col items-center justify-center w-full aspect-[3/4] 
             border-2 border-dashed rounded-xl transition-all duration-200 cursor-pointer
             ${isDragging 
-              ? 'border-indigo-500 bg-indigo-50' 
-              : 'border-slate-300 bg-slate-50 hover:border-indigo-400 hover:bg-slate-100'
+              ? 'border-rose-500 bg-rose-50' 
+              : 'border-slate-300 bg-slate-50 hover:border-rose-400 hover:bg-slate-100'
             }
           `}
           onDragOver={onDragOver}
@@ -81,7 +81,7 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ label, image, onIm
           />
           <div className="flex flex-col items-center justify-center pt-5 pb-6 text-center px-4">
             <div className="p-3 bg-white rounded-full shadow-sm mb-3">
-              <Upload className={`w-6 h-6 ${isDragging ? 'text-indigo-600' : 'text-slate-400'}`} />
+              <Upload className={`w-6 h-6 ${isDragging ? 'text-rose-600' : 'text-slate-400'}`} />
             </div>
             <p className="mb-1 text-sm font-medium text-slate-700">
               Click or drag image

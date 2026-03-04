@@ -54,7 +54,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, a
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden">
         <div className="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
           <h2 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
-            <Settings className="w-5 h-5 text-indigo-600" />
+            <Settings className="w-5 h-5 text-rose-600" />
             Settings
           </h2>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600 transition-colors">
@@ -72,7 +72,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, a
             <select 
               value={apiConfig.activeModel}
               onChange={(e) => setApiConfig({ ...apiConfig, activeModel: e.target.value as ModelId })}
-              className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+              className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
             >
               <option value={ModelId.FLASH}>Gemini 2.5 Flash Image (Fast & Free-tier)</option>
               <option value={ModelId.PRO}>Gemini 3 Pro Image Preview (High Quality - Paid)</option>
@@ -92,12 +92,12 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, a
                 value={newKey}
                 onChange={(e) => setNewKey(e.target.value)}
                 placeholder="Paste Gemini API Key..."
-                className="flex-1 px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
+                className="flex-1 px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none text-sm"
               />
               <button 
                 onClick={handleAddKey}
                 disabled={isValidating || !newKey}
-                className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center min-w-[80px]"
+                className="px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center min-w-[80px]"
               >
                 {isValidating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
               </button>
